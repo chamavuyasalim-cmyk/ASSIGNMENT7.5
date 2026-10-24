@@ -1,0 +1,416 @@
+/* 1. Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f8fafc;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* 2. Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px 7%;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(15, 23, 42, 0.06);
+}
+
+.logo,
+.footer-logo {
+    color: #2563eb;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #475569;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.back-to-top:hover {
+    color: #2563eb;
+}
+
+.nav-button,
+.primary-button,
+.cta-button {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 7px;
+    background-color: #2563eb;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.nav-button:hover,
+.primary-button:hover,
+.cta-button:hover {
+    background-color: #1d4ed8;
+}
+
+/* 3. Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 45px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 7%;
+}
+
+.hero-content {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+    color: #172554;
+    font-size: clamp(34px, 4.5vw, 56px);
+    line-height: 1.15;
+    overflow-wrap: break-word;
+}
+
+.hero-description {
+    max-width: 520px;
+    margin-bottom: 28px;
+    color: #64748b;
+    font-size: 17px;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.secondary-button {
+    display: inline-block;
+    padding: 11px 20px;
+    border: 1px solid #2563eb;
+    border-radius: 7px;
+    color: #2563eb;
+    font-weight: bold;
+    text-align: center;
+}
+
+.secondary-button:hover {
+    background-color: #dbeafe;
+}
+
+.hero-image {
+    flex: 1 1 50%;
+    min-width: 0;
+}
+
+.hero-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+/* 4. Features Section */
+.features {
+    padding: 75px 7%;
+    background-color: #eff6ff;
+}
+
+.section-heading {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.section-heading h2,
+.about h2,
+.cta h2 {
+    margin-bottom: 14px;
+    color: #172554;
+    font-size: clamp(26px, 3vw, 36px);
+    line-height: 1.25;
+}
+
+.section-heading > p:last-child {
+    color: #64748b;
+}
+
+/* Responsive feature cards */
+.feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    display: flex;
+    flex: 1 1 250px;
+    flex-direction: column;
+    min-width: 0;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(15, 23, 42, 0.04);
+}
+
+.feature-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: #dbeafe;
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.feature-card h3 {
+    margin-bottom: 10px;
+    color: #172554;
+    font-size: 21px;
+}
+
+.feature-card p {
+    color: #64748b;
+}
+
+/* 5. About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 70px 7%;
+}
+
+.about > div,
+.about > p {
+    flex: 1 1 280px;
+    min-width: 0;
+}
+
+.about h2 {
+    margin-bottom: 0;
+}
+
+.about > p {
+    color: #64748b;
+    font-size: 16px;
+}
+
+/* 6. Call-to-Action Section */
+.cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    padding: 65px 7%;
+    background-color: #172554;
+    color: #ffffff;
+    text-align: center;
+}
+
+.cta h2 {
+    color: #ffffff;
+    overflow-wrap: break-word;
+}
+
+.cta p {
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.cta-button {
+    background-color: #3b82f6;
+}
+
+/* 7. Footer */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    padding: 25px 7%;
+    background-color: #ffffff;
+}
+
+.footer p {
+    color: #64748b;
+    text-align: center;
+}
+
+.back-to-top {
+    color: #475569;
+}
+
+/* 8. Tablet Layout */
+@media (max-width: 900px) {
+    .navbar {
+        justify-content: center;
+    }
+
+    .hero {
+        gap: 30px;
+        padding-top: 55px;
+        padding-bottom: 55px;
+    }
+
+    .feature-card {
+        flex-basis: 220px;
+    }
+}
+
+/* 9. Mobile Layout */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        gap: 16px;
+        padding: 22px 5%;
+    }
+
+    .nav-links {
+        gap: 12px 18px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .hero-content,
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        max-width: 500px;
+    }
+
+    .features {
+        padding: 50px 6%;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 18px;
+    }
+
+    .feature-card {
+        flex: 1 1 auto;
+        width: 100%;
+        padding: 24px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 50px 6%;
+    }
+
+    .about > div,
+    .about > p {
+        width: 100%;
+    }
+
+    .cta {
+        padding: 50px 6%;
+    }
+
+    .footer {
+        flex-direction: column;
+        justify-content: center;
+        padding: 25px 6%;
+    }
+}
+
+/* 10. Small Mobile Screens */
+@media (max-width: 360px) {
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-buttons a {
+        width: 100%;
+    }
+
+    .nav-links {
+        gap: 10px;
+    }
+}
